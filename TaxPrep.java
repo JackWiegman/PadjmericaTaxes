@@ -74,7 +74,10 @@ public class TaxPrep {
 		}
 
 		double finalTax;
-		if (salary >= 10000 && salary < 25000) {
+		if (salary < 10000) {
+			finalTax = totalTax;
+		}
+		else if (salary >= 10000 && salary < 25000) {
 			if (totalTax < 500) {
 				finalTax = 500;
 			} else {
